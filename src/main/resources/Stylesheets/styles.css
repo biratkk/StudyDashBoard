@@ -1,0 +1,13 @@
+#rootPane{
+    -fx-background-color: linear-gradient(to bottom,#122381FF,#5531F6FF);
+}
+
+#dock,#dockPane{
+	-fx-background: none;
+	
+	-fx-border-radius:20px;
+}
+
+.dockButton{
+	-fx-border-radius:20px;
+}
