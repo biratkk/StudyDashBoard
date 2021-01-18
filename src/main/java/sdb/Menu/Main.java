@@ -21,17 +21,10 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/Menu.fxml"));
         Scene scene = new Scene(loader.load());
         stage.setScene(scene);
+        stage.setTitle("Study Dashboard");
         stage.setMaximized(true);
         stage.show();
-        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-            @Override
-            public void handle(WindowEvent windowEvent) {
-                Controller controller = loader.getController();
-                controller.getStageList().forEach((app,stage)->{
-                   stage.close();
-                });
-            }
-        });
+
     }
 
 
