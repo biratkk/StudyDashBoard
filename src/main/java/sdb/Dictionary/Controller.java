@@ -1,19 +1,19 @@
 package sdb.Dictionary;
 
-import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.input.KeyEvent;
-import org.json.JSONArray;
-import org.json.JSONObject;
-import org.jsoup.nodes.Document;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 public class Controller implements Initializable {
     public Label word;
@@ -21,10 +21,9 @@ public class Controller implements Initializable {
     public TextField textField;
 
     public void enterReleased(KeyEvent keyEvent) throws IOException {
-        String e = keyEvent.getCode().toString();
-        if (e.equals("ENTER")){
+        //String e = keyEvent.getCode().toString();
+        if (keyEvent.getCode() == KeyCode.ENTER)
             doSearch();
-        }
     }
 
     private void doSearch() throws IOException {

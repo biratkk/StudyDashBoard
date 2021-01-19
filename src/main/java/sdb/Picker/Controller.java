@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 public class Controller{
     public CheckBox calculatorCB;
@@ -32,10 +31,10 @@ public class Controller{
      */
     public void onChosen(ActionEvent event) {
         CheckBox temp = (CheckBox)event.getSource();
-        if(temp.isSelected()){
+        if (temp.isSelected()) {
             lis.add(temp.getText());
-        }
-        else if(lis.contains(temp.getText())){
+        } else {
+            // no need to check if contains to remove - if it's not present it can't be removed
             lis.remove(temp.getText());
         }
     }
@@ -44,6 +43,8 @@ When application is closed this method is called so that
 the features that need to be open can be obtained
  */
     List<String> getChecked(){
-        return lis.stream().collect(Collectors.toList());
+        // not much point streaming and collecting
+        return new ArrayList<>(lis);
+        // return lis.stream().collect(Collectors.toList());
     }
 }

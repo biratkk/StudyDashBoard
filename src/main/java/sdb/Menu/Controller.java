@@ -20,8 +20,8 @@ public class Controller implements Initializable {
     public Button notes;
     public Button timer;
     public Button whiteboard;
-    public List<Button> buttonList =
-            Arrays.asList(calculator, dictionary, notes, timer, whiteboard);
+    // you shouldn't initialize the list here, calculator etc. will be all be null
+    public List<Button> buttonList;
     public List<Image> imgList = new ArrayList<>();
     public Pane showScene;
     public AnchorPane rootPane;
@@ -31,6 +31,7 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        buttonList = Arrays.asList(calculator, dictionary, notes, timer, whiteboard);
     }
 
     public void calcButton(ActionEvent event) throws IOException {
