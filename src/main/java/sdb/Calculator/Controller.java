@@ -7,14 +7,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.StringReader;
 import java.net.URL;
-import java.util.ArrayDeque;
-import java.util.Deque;
 import java.util.ResourceBundle;
-import java.util.Stack;
 
 public class Controller implements Initializable {
     public Label display;
@@ -31,13 +25,13 @@ public class Controller implements Initializable {
     }
 
     public void calculate(ActionEvent event) {
-            new Thread(()->{
-                calculation = String.valueOf(eval(calculation));
-                System.out.println(calculation);
-                Platform.runLater(()->{
-                    display.setText(calculation);
-                });
-            }).start();
+        new Thread(() -> {
+            calculation = String.valueOf(eval(calculation));
+            System.out.println(calculation);
+            Platform.runLater(()-> {
+                display.setText(calculation);
+            });
+        }).start();
 
     }
 

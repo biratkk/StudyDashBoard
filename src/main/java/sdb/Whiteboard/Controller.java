@@ -1,5 +1,8 @@
 package sdb.Whiteboard;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
@@ -7,11 +10,6 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
-
-
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
     public ColorPicker colorPicker;
