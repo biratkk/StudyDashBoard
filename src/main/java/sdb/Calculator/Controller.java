@@ -119,12 +119,5 @@ public class Controller implements Initializable {
         }.parse();
     }
 
-    public void getCursor(MouseEvent mouseEvent) {
-    }
 
-    public void movePane(MouseEvent mouseEvent) {
-    }
-
-    public void releaseCursor(MouseEvent mouseEvent) {
-    }
 }

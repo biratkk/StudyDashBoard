@@ -22,7 +22,6 @@ public class Main extends Application {
         Scene scene = new Scene(loader.load());
         stage.setScene(scene);
         stage.setTitle("Study Dashboard");
-        stage.setMaximized(true);
         stage.show();
 
     }

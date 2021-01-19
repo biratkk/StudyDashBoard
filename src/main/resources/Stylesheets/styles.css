@@ -4,10 +4,4 @@
 
 #dock,#dockPane{
 	-fx-background: none;
-	
-	-fx-border-radius:20px;
-}
-
-.dockButton{
-	-fx-border-radius:20px;
 }

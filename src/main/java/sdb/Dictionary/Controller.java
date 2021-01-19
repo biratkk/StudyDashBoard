@@ -10,6 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
+import javafx.scene.paint.Paint;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.jsoup.Jsoup;
@@ -21,7 +22,6 @@ public class Controller implements Initializable {
     public TextField textField;
 
     public void enterReleased(KeyEvent keyEvent) throws IOException {
-        //String e = keyEvent.getCode().toString();
         if (keyEvent.getCode() == KeyCode.ENTER)
             doSearch();
     }
@@ -55,5 +55,7 @@ public class Controller implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         word.setText("");
         definition.setText("");
+        word.setTextFill(Paint.valueOf("White"));
+        definition.setTextFill(Paint.valueOf("White"));
     }
 }
